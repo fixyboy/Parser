@@ -1,0 +1,12 @@
+coverage
+node_modules
+build
+.env
+.env.example
+.env.test
+logs
+screenshots
+assignmenet.md
+parser_assignment.md
+gemini.md
+skills

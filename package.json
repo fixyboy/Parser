@@ -1,0 +1,39 @@
+{
+  "name": "se2.dev",
+  "scripts": {
+    "lint": "eslint src",
+    "clean": "rd /s /q build",
+    "prebuild": "npm run clean && npm run lint",
+    "build": "tsc",
+    "postbuild": "echo Build completed!",
+    "prestart": "npm run build",
+    "start": "node build/index.js",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/jest": "^30.0.0",
+    "eslint": "^10.2.1",
+    "globals": "^17.5.0",
+    "jest": "^30.3.0",
+    "jiti": "^2.6.1",
+    "ts-jest": "^29.4.9",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.59.0"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "csv-parse": "^6.2.1",
+    "dotenv": "^17.4.2",
+    "winston": "^3.19.0"
+  }
+}
