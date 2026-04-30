@@ -5,8 +5,9 @@ build
 .env.example
 .env.test
 logs
-screenshots
 assignmenet.md
 parser_assignment.md
 gemini.md
-skills
+skills/
+screenshots/
+.vscode
