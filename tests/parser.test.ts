@@ -1,5 +1,5 @@
 // 1. Import what you want to test
-import { readCSVFile, writeCSVFile } from '../src/util/parser';
+import { readCSVFile, writeCSVFile } from '../src/util/CSV_parser';
 import path from 'path';
 
 describe('readCSVFile', () => {
