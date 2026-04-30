@@ -4,10 +4,10 @@ build
 .env
 .env.example
 .env.test
+.vscode 
 logs
 assignmenet.md
 parser_assignment.md
 gemini.md
 skills/
 screenshots/
-.vscode
