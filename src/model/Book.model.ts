@@ -2,7 +2,7 @@ import { Item, ItemCategory } from "./Item.model";
 
 // Constrained fields use literal union types (like Cake's `Type`) so only
 // valid values can be passed in — this is part of "best practices".
-type Genre =
+export type Genre =
     | "Science Fiction"
     | "Thriller"
     | "Biography"
@@ -14,7 +14,7 @@ type Genre =
     | "Horror"
     | "Young Adult";
 
-type Format = "Paperback" | "Hardcover" | "Audiobook" | "E-Book";
+export type Format = "Paperback" | "Hardcover" | "Audiobook" | "E-Book";
 
 export class Book implements Item {
 

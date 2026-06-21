@@ -1,6 +1,6 @@
 import { Item, ItemCategory } from "./Item.model";
 
-type ToyType =
+export type ToyType =
     | "Plush Toy"
     | "Building Blocks"
     | "Action Figure"
@@ -12,9 +12,9 @@ type ToyType =
     | "Board Game"
     | "RC Drone";
 
-type AgeGroup = "0-3" | "4-7" | "8-12" | "13+";
+export type AgeGroup = "0-3" | "4-7" | "8-12" | "13+";
 
-type Material = "Fabric" | "Plastic" | "Wood" | "Foam" | "Metal";
+export type Material = "Fabric" | "Plastic" | "Wood" | "Foam" | "Metal";
 
 export class Toy implements Item {
 
