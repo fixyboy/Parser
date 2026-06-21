@@ -1,4 +1,4 @@
-import { Item, ItemCategory } from "./item.model";
+import { Item, ItemCategory } from "./Item.model";
 type Type = "Birthday" | "Wedding" | "Anniversary" | "BabyShower" | "Graduation" | "Other";
 
 export class Cake implements Item {
