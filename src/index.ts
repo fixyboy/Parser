@@ -1,15 +1,13 @@
 import path from 'path';
-import { readCSVFile } from './util/parser'
+import { parseJSONFile } from './util/jsonParser'
 import logger from './util/logger';
 
-const dataPath = path.resolve(__dirname, '../data/Cake orders.csv');
+const dataPath = path.resolve(__dirname, '../data/book orders.json');
 
 async function main() {
     try {
-        const cakes = await readCSVFile(dataPath)
-        for (const cake of cakes) {
-            logger.info(cake + '\n');
-        }
+        const books = await parseJSONFile(dataPath)
+        logger.info(JSON.stringify(books, null, 2))
     } catch(error) {
         logger.error(error)
     }
