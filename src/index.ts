@@ -1,5 +1,5 @@
 import path from 'path';
-import { parseJSONFile } from './util/JSON_parser'
+import { parseJSONFile } from './util/jsonParser'
 import logger from './util/logger';
 
 const dataPath = path.resolve(__dirname, '../data/book orders.json');

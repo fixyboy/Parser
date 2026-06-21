@@ -1,10 +1,10 @@
-import { parseJSONFile } from '../src/util/JSON_parser';
+import { parseJSONFile } from '../src/util/jsonParser';
 import path from 'path';
 
 describe("parseJSONFile", () =>{
     it('should return an array of objects when given a valid JSON file', async () => {
 
-        const filePath = path.resolve(__dirname, '../data/test_data.json');
+        const filePath = path.resolve(__dirname, './data/testData.json');
         const result = await parseJSONFile(filePath);
 
         expect(result).toBeDefined();
@@ -26,7 +26,7 @@ describe("parseJSONFile", () =>{
     })
 
     it('should throw an error when given an invalid JSON file', async () => {
-        const filePath = path.resolve(__dirname, '../data/invalid.json');
+        const filePath = path.resolve(__dirname, './data/invalid.json');
         await expect(parseJSONFile(filePath)).rejects.toThrow();
     });
     })

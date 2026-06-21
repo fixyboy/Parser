@@ -1,12 +1,12 @@
 // 1. Import what you want to test
-import { readCSVFile, writeCSVFile } from '../src/util/CSV_parser';
+import { readCSVFile, writeCSVFile } from '../src/util/csvParser';
 import path from 'path';
 
 describe('readCSVFile', () => {
 
     it('should return a 2D array when given a valid CSV file', async () => {
 
-        const filePath = path.resolve(__dirname, '../data/test_data.csv');
+        const filePath = path.resolve(__dirname, './data/testData.csv');
         const result = await readCSVFile(filePath);
 
 
@@ -16,12 +16,12 @@ describe('readCSVFile', () => {
     });
 
     it('should throw an error if the file does not exist', async () => {
-        const filePath = path.resolve(__dirname, '../data/non_existent_file.csv');
+        const filePath = path.resolve(__dirname, './data/nonExistentFile.csv');
         await expect(readCSVFile(filePath)).rejects.toThrow();
     });
 
     it('checking elements in the 2D array ', async () => {
-        const filePath = path.resolve(__dirname, '../data/test_data.csv');
+        const filePath = path.resolve(__dirname, './data/testData.csv');
         const result = await readCSVFile(filePath);
         expect(result[1][0]).toBe('0');
         expect(result[1][1]).toBe('Sponge');
@@ -52,7 +52,7 @@ describe('writeCSVFile', () => {
         ['2', 'Chocolate', 'Chocolate'],
     ];
 
-    const filePath = path.resolve(__dirname, 'temp_test_output.csv');
+    const filePath = path.resolve(__dirname, './data/tempTestOutput.csv');
     await writeCSVFile(filePath, data);
     const result = await readCSVFile(filePath);
     expect(result).toBeDefined();

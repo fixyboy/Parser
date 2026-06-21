@@ -1,10 +1,10 @@
-import { parseXMLFile } from '../src/util/XML_parser';
+import { parseXMLFile } from '../src/util/xmlParser';
 import path from 'path';
 
 describe("parseXMLFile", () =>{
     it('should return an array of objects when given a valid XML file', async () => {
 
-        const filePath = path.resolve(__dirname, '../data/test_data.xml');
+        const filePath = path.resolve(__dirname, './data/testData.xml');
         const result = await parseXMLFile(filePath);
 
         expect(result).toBeDefined();
@@ -28,7 +28,7 @@ describe("parseXMLFile", () =>{
     })
 
     it('should throw an error when given an invalid XML file', async () => {
-        const filePath = path.resolve(__dirname, '../data/invalid.xml');
+        const filePath = path.resolve(__dirname, './data/invalid.xml');
         await expect(parseXMLFile(filePath)).rejects.toThrow();
     });
     })
